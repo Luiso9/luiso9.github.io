@@ -41,6 +41,7 @@
 <br/>  
 
 <div align="center"><img src="https://rishavanand.github.io/static/images/spotify-readme-example.svg" /></div>  
+![My scrobbles](https://lastfm-recently-played.vercel.app/api?user=JeffreyCA01)
 
 <br/>  
 
