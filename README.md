@@ -40,7 +40,7 @@
 
 <br/>  
 
-<div align="center"><img src="https://spotify-recently-played-readme.vercel.app/api?user=31o2brgsitemtoiqlftouaeof2xi" /></div>  
+<div align="center"><img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31o2brgsitemtoiqlftouaeof2xi&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false" /></div>  
 
 <br/>  
 
