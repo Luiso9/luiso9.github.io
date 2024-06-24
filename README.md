@@ -1,9 +1,9 @@
 <div align="center">
-<img src="https://github.com/Luiso9/luiso9.github.io/blob/main/img/kimagure-orange-road.jpg?raw=true" align="center" style="width: 100%" />
+<img src="https://github.com/Luiso9/luiso9.github.io/blob/main/img/kimagure-orange-road.jpg?raw=true" align="center" style="width: 80%" />
 </div>  
   
-
-### <div align="center">I'm driannsa, I'm Front-End Developer. Fully self-taught.</div>  
+###
+<div align="center">I'm driannsa, I'm Front-End Developer. Fully self-taught.</div>  
   
 
 - ⚡ Fun fact: I use arch btw  
