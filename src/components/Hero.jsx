@@ -33,12 +33,12 @@ function Hero() {
       >
         <div className="container mx-auto">
           <div className="flex w-full flex-col items-start justify-center px-6 tracking-wide lg:w-1/2">
-            <h1 className="my-4 text-2xl text-black dark:text-white transition-colors duration-500 ease-in-out">
+            <h1 className="my-4 text-2xl text-white dark:text-white transition-colors duration-500 ease-in-out">
               Hello, I am Muhammad Andrian Saputra
             </h1>
             <a
-              className="inline-block border-b border-gray-600 text-xl leading-relaxed no-underline hover:border-black hover:text-black dark:border-gray-300 dark:hover:border-white dark:hover:text-white transition-colors duration-500 ease-in-out"
-              href="#"
+              className="inline-block text-white border-b border-gray-600 text-xl leading-relaxed no-underline hover:border-black hover:text-black dark:border-gray-300 dark:hover:border-white dark:hover:text-white transition-colors duration-500 ease-in-out"
+              href="#about"
             >
               Explore
             </a>

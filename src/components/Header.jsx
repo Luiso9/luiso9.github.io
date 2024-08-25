@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 function Header() {
   const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem('darkMode') === 'true');
 
@@ -16,8 +17,8 @@ function Header() {
     <>
       <nav
         id="header"
-        className="top-0 z-30 w-full bg-white py-1 transition-colors duration-500 ease-in-out dark:bg-slate-900">
-        <div className="container mx-auto mt-0 flex w-full flex-wrap items-center justify-between px-6 py-3">
+        className="top-0 z-30 w-full bg-white py-1 transition-colors duration-500 ease-in-out dark:bg-black">
+        <div className="container mx-auto mt-0 flex w-full flex-wrap items-center justify-between py-3">
           <label htmlFor="menu-toggle" className="block cursor-pointer md:hidden">
             <svg
               className="fill-current text-gray-900 dark:text-gray-200"
@@ -35,19 +36,19 @@ function Header() {
             className="order-3 hidden w-full md:order-1 md:flex md:w-auto md:items-center"
             id="menu">
             <nav>
-              <ul className="items-center justify-between pt-4 text-base text-gray-700 transition-colors duration-500 ease-in-out md:flex md:pt-0 dark:text-gray-300">
+              <ul className="items-center justify-between pt-4 text-base text-gray-700 transition-colors duration-500 ease-in-out dark:text-gray-300 md:flex md:pt-0">
                 <li>
                   <a
-                    className="inline-block px-4 py-2 no-underline hover:text-black hover:underline dark:hover:text-white"
+                    className="inline-block py-2 no-underline hover:text-black hover:underline dark:hover:text-white"
                     href="#">
-                    Achievements
+                    About
                   </a>
                 </li>
                 <li>
                   <a
-                    className="inline-block px-4 py-2 no-underline hover:text-black hover:underline dark:hover:text-white"
+                    className="ml-4 inline-block py-2 no-underline hover:text-black hover:underline dark:hover:text-white"
                     href="#">
-                    Skills
+                    Certificate
                   </a>
                 </li>
               </ul>
@@ -56,13 +57,13 @@ function Header() {
 
           <div className="order-1 md:order-2">
             <a
-              className="flex items-center text-xl font-bold tracking-wide text-gray-800 no-underline transition-colors duration-500 ease-in-out hover:no-underline dark:text-gray-200"
+              className="flex items-center justify-center text-xl font-bold tracking-wide text-gray-800 no-underline transition-colors duration-500 ease-in-out hover:no-underline dark:text-gray-200"
               href="#">
               PORTFOLIO
             </a>
           </div>
 
-          <div className="order-2 flex items-center md:order-3" id="nav-content">
+          <div className="order-2 flex items-center justify-center md:order-3" id="nav-content">
             <button
               onClick={toggleDarkMode}
               className="inline-block no-underline transition-colors duration-500 ease-in-out hover:text-black focus:outline-none dark:hover:text-white">

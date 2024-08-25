@@ -7,5 +7,20 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: white;
+}
+
+body {
+  overflow-y: scroll; /* Keeps the vertical scrollbar hidden, but functional */
+}
+
+body {
+  overflow-y: auto;
+  /* hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* hide scrollbar for chrome, safari and opera */
+body::-webkit-scrollbar {
+  display: none;
 }
