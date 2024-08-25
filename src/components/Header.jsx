@@ -47,7 +47,7 @@ function Header() {
                 <li>
                   <a
                     className="ml-4 inline-block py-2 no-underline hover:text-black hover:underline dark:hover:text-white"
-                    href="#">
+                    href="#cert">
                     Certificate
                   </a>
                 </li>

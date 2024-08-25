@@ -58,7 +58,7 @@ function About() {
 
               <div className="lg:w-1/2 lg:px-5">
                 <div className="">
-                  <h2 className="mb-6 text-2xl font-bold">My Skills</h2>
+                  <h2 className="mb-6 text-2xl font-bold text-black transition-colors duration-500 ease-in-out dark:text-white">My Skills</h2>
                   <div className="my-3 flex flex-wrap gap-4 text-xs lg:text-lg">
                     <span className="rounded-lg bg-zinc-800 px-5 py-3 text-base font-medium text-gray-300 dark:text-white">
                       JavaScript

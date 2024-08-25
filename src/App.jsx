@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Fade, Slide } from 'react-awesome-reveal';
-import {RemoveScrollBar} from 'react-remove-scroll-bar';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Cert from './components/Cert';
+import Footer from './components/Footer';
 import Project from './components/Project';
 
 export default function App() {
@@ -19,22 +20,29 @@ export default function App() {
     setIsDarkMode(!isDarkMode);
     localStorage.setItem('darkMode', !isDarkMode);
   };
+
   return (
     <>
-    
-      <Fade
-        cascade
-        damping={0.1}
-        triggerOnce
-        className="bg-white transition-colors duration-500 ease-in-out dark:bg-black">
+      <div className="bg-white transition-colors duration-500 ease-in-out dark:bg-black">
         <Header />
-        <Hero />
-      </Fade>
+        <Fade cascade damping={0.1} triggerOnce>
+          <Hero />
+        </Fade>
 
-      <Fade direction="left" triggerOnce>
-        <About />  
-        <Project />
-      </Fade>
+        <Slide direction="left" triggerOnce>
+          <About />
+        </Slide>
+
+        <Slide direction="right" triggerOnce>
+          <Cert />
+        </Slide>
+
+        <Slide direction="left" triggerOnce>
+          <Project />
+        </Slide>
+
+        <Footer />
+      </div>
     </>
   );
 }
