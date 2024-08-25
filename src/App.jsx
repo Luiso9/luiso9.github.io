@@ -7,7 +7,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Project from './components/Project';
 
-export function App() {
+export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem('darkMode') === 'true');
 
   useEffect(() => {
@@ -33,6 +33,7 @@ export function App() {
 
       <Fade direction="left" triggerOnce>
         <About />  
+        <Project />
       </Fade>
     </>
   );
