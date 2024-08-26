@@ -4,7 +4,7 @@ function Cert() {
   return (
     <section
       id="cert"
-      className="max-w-full overflow-hidden bg-white py-20 transition-colors duration-500 ease-in-out dark:bg-black md:py-28">
+      className="max-w-full overflow-hidden bg-white py-20 transition-colors duration-500 flex justify-center items-center ease-in-out dark:bg-black md:py-28">
       <div className="px-4 lg:px-20">
         <div className="mb-3 flex h-full w-full flex-col items-center justify-center">
           <h2 className="text-4xl font-bold uppercase tracking-widest text-black transition-colors duration-500 ease-in-out dark:text-white">
@@ -18,7 +18,7 @@ function Cert() {
         {/* Card Start */}
         <div className="mt-12 flex w-full flex-wrap items-start justify-between gap-8">
           {/* Card 1 */}
-          <div className="w-full sm:w-96">
+          <div className="w-full sm:w-96 md:w-80">
             <img
               className="w-full rounded-sm object-cover"
               src="https://files.catbox.moe/a0puej.png"
@@ -38,7 +38,7 @@ function Cert() {
           </div>
 
           {/* Card 2 */}
-          <div className="w-full sm:w-96">
+          <div className="w-full sm:w-96 md:w-80">
             <img
               className="w-full rounded-sm object-cover"
               src="https://files.catbox.moe/f2ucaw.jpg"
@@ -58,7 +58,7 @@ function Cert() {
             </div>
           </div>
           {/* Card 2 */}
-          <div className="w-full sm:w-96">
+          <div className="w-full sm:w-96 md:w-80">
             <img
               className="w-full rounded-sm object-cover"
               src="https://files.catbox.moe/a3w927.jpg"

@@ -5,27 +5,27 @@ function Project() {
     {
       title: 'Perpustakaan Online',
       description: 'Sebuah projek web yang menyediakan layanan perpustakaan online',
-      image: 'https://via.placeholder.com/150',
-      link: 'https://github.com/luiso9/congga',
+      image: 'https://images-ext-1.discordapp.net/external/M7gVFfAsJYLQW7slS0POH4HDKgR9IT6WXxGJDTYE3-M/https/opengraph.githubassets.com/b6c63f66087b9b96c401721299f0c8c1f7e55d365abd81b1c3988a01b0e37c96/Luiso9/congga?format=webp&width=900&height=450',
+      link: 'https://github.com/luiso9/congga'
     },
     {
       title: 'Automatic Gate Arduino',
       description: 'Arduino yang berfungsi sebagai pengatur gerbang otomatis',
-      image: 'https://via.placeholder.com/150',
-      link: 'https://github.com/luiso9/automatic-gate-arduino',
+      image: 'https://images-ext-1.discordapp.net/external/7N3f8huZsKwfWBwgwbgXSd1FX73AHOtvxKQivx2ghOs/https/opengraph.githubassets.com/3737eebea3247d564ba402f15ab45b72008d14a0acf3af5617873a75a6fe6240/Luiso9/automatic-gate-arduino?format=webp&width=900&height=450',
+      link: 'https://github.com/luiso9/automatic-gate-arduino'
     },
     {
-      title: 'Mari-go',
+      title: 'mari-go',
       description: 'Sebuah Discord Bot yang saya buat dengan Go-Lang',
-      image: 'https://via.placeholder.com/150',
-      link: 'https://github.com/luiso9/mari-go',
+      image: 'https://images-ext-1.discordapp.net/external/jBIBega2qzhPTNAvQHWRIVHaTMCVJFpwFjoOjCeIAIA/https/opengraph.githubassets.com/b7f899463e78d04a48284ab3bc3614d1ffac0128489ff7fde463782ce1c62fd5/Luiso9/mari-go?format=webp&width=900&height=450',
+      link: 'https://github.com/luiso9/mari-go'
     },
     {
-      title: 'Emfio',
+      title: 'emfio',
       description:
         'Bot Facebook yang saya kembangkan untuk mengupload tiap frame sebuah film/anime secara berkala',
-      image: 'https://via.placeholder.com/150',
-      link: 'https://github.com/luiso9/emfio',
+      image: 'https://images-ext-1.discordapp.net/external/heJrStxC9C45SM4WYg5LnZYwg9Bq7DllAuDxQ0Ck9Do/https/opengraph.githubassets.com/7a161cc3a8be02ae6fc56b2f734b294a4a57362849521dd7fbf17e8d0bd65fd3/Luiso9/emfio?format=webp&width=900&height=450',
+      link: 'https://github.com/luiso9/emfio'
     }
   ];
 
@@ -46,30 +46,29 @@ function Project() {
           </div>
         </div>
       </section>
-      <div className="container mx-auto mb-20">
-        <div className="grid grid-cols-2 grid-rows-2 gap-8">
+
+      <div className="container mx-auto mb-24">
+        <div className="flex flex-col items-center gap-3 md:flex-row">
+          {/* Batas  */}
           {cards.map((card, i) => (
-            <a
-              key={i}
-              href={card.link}
-              className="relative cursor-pointer group overflow-hidden p-5 duration-1000 hover:duration-1000 bg-neutral-800 rounded-xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="relative z-10">
-                <h3 className="text-neutral-50 font-bold text-xl italic">{card.title}</h3>
-                <p className="text-neutral-300">{card.description}</p>
+            <div
+              className="text-neutral z-1 relative flex max-w-[1fr] flex-col items-center gap-5 overflow-hidden rounded-md bg-[##FFFCEC] shadow-md transition-colors ease-in-out dark:bg-neutral-100 md:w-1/2 hover:shadow-md dark:hover:shadow-slate-400 "
+              key={i}>
+              <div className="h-42 border-b bg-cover">
+                <img src={card.image} alt="" />
               </div>
-              <div className="absolute inset-0 z-0">
-                <div className="group-hover:-rotate-45 bg-transparent group-hover:scale-150 -top-12 -left-12 absolute shadow-yellow-800 shadow-inner rounded-xl transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"></div>
-                <div className="group-hover:rotate-45 bg-transparent group-hover:scale-150 top-44 left-14 absolute shadow-red-800 shadow-inner rounded-xl transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"></div>
-                <div className="group-hover:-rotate-45 bg-transparent group-hover:scale-150 top-24 left-56 absolute shadow-sky-800 shadow-inner rounded-xl transition-all ease-in-out group-hover:duration-1000 duration-1000 w-24 h-24"></div>
-                <div className="group-hover:-rotate-45 bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-red-800 shadow-inner rounded-xl transition-all ease-in-out group-hover:duration-1000 duration-1000 w-12 h-12"></div>
-                <div className="group-hover:rotate-45 bg-transparent group-hover:scale-150 top-12 left-12 absolute shadow-green-800 shadow-inner rounded-xl transition-all ease-in-out group-hover:duration-1000 duration-1000 w-44 h-44"></div>
-                <div className="group-hover:rotate-45 bg-transparent group-hover:scale-150 -top-24 -left-12 absolute shadow-sky-800 shadow-inner rounded-xl transition-all ease-in-out group-hover:duration-1000 duration-1000 w-64 h-64"></div>
-                <div className="group-hover:-rotate-45 bg-transparent group-hover:scale-150 top-24 left-12 absolute shadow-sky-500 shadow-inner rounded-xl transition-all ease-in-out group-hover:duration-1000 duration-1000 w-4 h-4"></div>
+              <a
+                key={i}
+                href={card.link}
+                aria-hidden="true"
+                className="m-auto max-h-[53px] min-h-[53px] w-[1fr] justify-center rounded-lg font-bold leading-relaxed hover:text-blue-400">
+                {card.title}
+              </a>
+              <div className="w-64 h-[0.5px] border-black bg-gray-200"></div>
+              <div className="mx-auto max-w-[350px] text-ellipsis pb-6 pl-9 pr-9 text-sm leading-5">
+                {card.description}
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>

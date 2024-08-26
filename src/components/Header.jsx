@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
+function Header({ scrollToSection }) {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [isDarkMode, setIsDarkMode] = React.useState(() => localStorage.getItem('darkMode') === 'true');
 
-function Header() {
-  const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem('darkMode') === 'true');
-
-  useEffect(() => {
+  React.useEffect(() => {
     document.documentElement.classList.toggle('dark', isDarkMode);
   }, [isDarkMode]);
 
@@ -13,13 +14,25 @@ function Header() {
     localStorage.setItem('darkMode', !isDarkMode);
   };
 
+  const toggleMenu = () => {
+    setIsOpen((prevOpen) => !prevOpen);
+  };
+
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault(); // Prevent default anchor link behavior
+    scrollToSection(sectionId);
+  };
+
   return (
     <>
       <nav
         id="header"
         className="top-0 z-30 w-full bg-white py-1 transition-colors duration-500 ease-in-out dark:bg-black">
-        <div className="container mx-auto mt-0 flex w-full flex-wrap items-center justify-between py-3">
-          <label htmlFor="menu-toggle" className="block cursor-pointer md:hidden">
+        <div className="container mx-auto mt-0 flex w-full flex-wrap items-center justify-between px-4 py-3">
+          <button
+            onClick={toggleMenu}
+            htmlFor="menu-toggle"
+            className="block cursor-pointer md:hidden">
             <svg
               className="fill-current text-gray-900 dark:text-gray-200"
               xmlns="http://www.w3.org/2000/svg"
@@ -29,30 +42,29 @@ function Header() {
               <title>menu</title>
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
             </svg>
-          </label>
-          <input className="hidden" type="checkbox" id="menu-toggle" />
+          </button>
 
           <div
-            className="order-3 hidden w-full md:order-1 md:flex md:w-auto md:items-center"
+            className={`order-3 w-full md:order-1 md:flex md:w-auto md:items-center ${isOpen ? 'block' : 'hidden'}`}
             id="menu">
             <nav>
               <ul className="items-center justify-between pt-4 text-base text-gray-700 transition-colors duration-500 ease-in-out dark:text-gray-300 md:flex md:pt-0">
                 <li>
                   <a
                     className="inline-block py-2 no-underline hover:text-black hover:underline dark:hover:text-white"
-                    href="#">
+                    href="#about">
                     About
                   </a>
                 </li>
                 <li>
                   <a
-                    className="ml-4 inline-block py-2 no-underline hover:text-black hover:underline dark:hover:text-white"
+                    className="md:ml-4 inline-block py-2 no-underline hover:text-black hover:underline dark:hover:text-white"
                     href="#cert">
                     Certificate
                   </a>
                 </li>
               </ul>
-            </nav>
+            </nav> 
           </div>
 
           <div className="order-1 md:order-2">
@@ -95,5 +107,9 @@ function Header() {
     </>
   );
 }
+
+Header.propTypes = {
+  scrollToSection: PropTypes.func.isRequired,
+};
 
 export default Header;
