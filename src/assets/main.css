@@ -1,0 +1,8 @@
+@import url(https://db.onlinewebfonts.com/c/cef287640b99a6df2ffaee3ad24851af?family=Vito+Wide);
+@import './base.css';
+
+h1, .navbar-title {
+    font-family: "Vito Wide";
+    font-style: italic;
+    font-weight: bold;
+}
