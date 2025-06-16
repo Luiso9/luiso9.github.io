@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {useTheme} from '@/providers/useTheme'
 import {ref} from 'vue'
-import {House, Menu, Blinds, Share2} from 'lucide-vue-next'
+import {Blinds, House, Menu, Share2} from 'lucide-vue-next'
 
 const {theme, toggleTheme} = useTheme()
 const isMenuOpen = ref(false)
@@ -12,7 +12,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-	<nav class="navbar bg-base-100 sticky top-0 z-50">
+	<nav class="navbar bg-gradient-to-b from-base-100 to-transparent sticky top-0 z-50">
 		<div class="container mx-auto flex items-center justify-between px-4">
 			<div class="flex items-center space-x-6">
 				<a href="/" class="navbar-title btn btn-ghost text-3xl font-bold tracking-wide text-base-content">DEMO</a>
