@@ -1,10 +1,9 @@
 @import "tailwindcss";
-
 @plugin "daisyui";
 @plugin "daisyui/theme" {
     name: "darkDef";
     default: false;
-    prefersdark: false;
+    prefersdark: true;
     color-scheme: "dark";
     --color-base-100: oklch(14% 0.004 49.25);
     --color-base-200: oklch(21% 0.006 56.043);
@@ -83,5 +82,13 @@
         background-position: -5px -5px;
         position: absolute;
         inset: 0;
+    }
+
+}
+
+@theme {
+    --font-sans {
+        font-family: "Vito Wide", serif;
+        font-weight: bolder;
     }
 }

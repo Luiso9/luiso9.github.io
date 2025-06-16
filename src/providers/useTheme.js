@@ -1,6 +1,6 @@
-import {ref, onMounted} from 'vue'
+import {onMounted, ref} from 'vue'
 
-const theme = ref('blueish')
+const theme = ref('darkDef')
 
 export function useTheme() {
     const setTheme = (newTheme) => {
@@ -9,13 +9,11 @@ export function useTheme() {
     }
 
     const toggleTheme = () => {
-        const newTheme = theme.value === 'blueish' ? 'darkDef' : 'blueish'
-        setTheme(newTheme)
+        setTheme(theme.value === 'darkDef' ? 'blueish' : 'darkDef')
     }
 
     onMounted(() => {
-        const current = document.documentElement.getAttribute('data-theme') || 'blueish'
-        theme.value = current
+        theme.value = document.documentElement.getAttribute('data-theme') || 'darkDef'
     })
 
     return {

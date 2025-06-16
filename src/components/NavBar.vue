@@ -1,31 +1,29 @@
 <script setup lang="ts">
 import {useTheme} from '@/providers/useTheme'
-import {ref} from 'vue'
 import {Blinds, House, Menu, Share2} from 'lucide-vue-next'
 
 const {theme, toggleTheme} = useTheme()
-const isMenuOpen = ref(false)
 
-const toggleMenu = () => {
-	isMenuOpen.value = !isMenuOpen.value
-}
 </script>
 
 <template>
-	<nav class="navbar bg-gradient-to-b from-base-100 to-transparent sticky top-0 z-50">
+	<nav class="navbar navbar-glass  rounded-sm top-0 z-50 p-4">
 		<div class="container mx-auto flex items-center justify-between px-4">
 			<div class="flex items-center space-x-6">
 				<a href="/" class="navbar-title btn btn-ghost text-3xl font-bold tracking-wide text-base-content">DEMO</a>
 
 				<!-- Desktop Navigation Links -->
-				<div class="hidden md:flex space-x-4">
-					<button class="btn btn-base-300 w-24 text-base-content hover:btn-base-300/80 transition-colors duration-300">
+				<div class="hidden md:flex space-x-4 text-lg antialiased">
+					<button
+							class="btn btn-lg outline-base-content btn-base-300 w-24 text-base-content hover:btn-base-300/80 transition-colors duration-300">
 						Home
 					</button>
-					<button class="btn btn-base-300 w-24 text-base-content hover:btn-base-300/80 transition-colors duration-300">
+					<button
+							class="btn btn-lg outline-base-content btn-base-300 w-24 text-base-content hover:btn-base-300/80 transition-colors duration-300">
 						Project
 					</button>
-					<button class="btn btn-base-300 w-24 text-base-content hover:btn-base-300/80 transition-colors duration-300">
+					<button
+							class="btn btn-lg outline-base-content btn-base-300 w-24 text-base-content hover:btn-base-300/80 transition-colors duration-300">
 						Timeline
 					</button>
 				</div>
@@ -36,7 +34,7 @@ const toggleMenu = () => {
 				<!-- Toggle theme -->
 				<button
 						@click="toggleTheme"
-						:class="['btn btn-circle btn-ghost swap swap-rotate relative overflow-hidden', theme === 'darkDef' ? 'swap-active' : '']"
+						:class="['btn btn-circle btn-ghost swap swap-rotate relative overflow-hidden', theme === 'blueish' ? 'swap-active' : '']"
 						aria-label="Toggle theme"
 				>
 					<!-- Sun Icon (Light Mode) -->
@@ -58,11 +56,11 @@ const toggleMenu = () => {
 		</div>
 
 		<div class="dropdown dropdown-end md:hidden">
-			<div tabindex="0" role="button" class="btn btn-ghost text-base-content rounded font-medium">
+			<div tabindex="0" role="button" class="btn btn-ghost text-base-content rounded-sm font-medium">
 				<Menu class="w-5 h-5"/>
 			</div>
 			<ul tabindex="0"
-			    class="dropdown-content menu bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 border-[0.3px] border-neutral-content/10 rounded-2xl w-64 p-4 shadow-2xl mt-2">
+			    class="dropdown-content menu bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 border-[0.3px] border-neutral-content/10 rounded-sm w-64 p-4 shadow-2xl mt-2">
 				<li>
 					<a class="flex items-center p-3 text-base-content">
 						<House class="w-5 h-5 mr-3 text-primary"/>

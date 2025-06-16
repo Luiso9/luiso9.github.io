@@ -9,8 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.7.1",
     "@tailwindcss/vite": "^4.1.10",
     "animejs": "^4.0.2",
+    "fullpage.js": "^4.0.36",
+    "gsap": "^3.13.0",
+    "imagesloaded": "^5.0.0",
     "lucide-vue-next": "^0.515.0",
     "material-icons": "^1.13.12",
     "tailwindcss": "^4.1.10",
