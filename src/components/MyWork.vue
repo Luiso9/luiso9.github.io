@@ -16,7 +16,7 @@ import {Quote} from 'lucide-vue-next'
 		<div
 				class="col-span-4 row-span-3 row-start-2 md:col-span-3 md:row-span-3 md:row-start-2 flex justify-center items-center md:p-4">
 			<div class="w-[80%] h-full rounded-xl overflow-hidden bg-base-100 shadow-lg md:w-full">
-				<img src="/images/project1.png" alt="Project" class="w-full h-full object-cover"/>
+				<img src="/images/project1.jpg" alt="Project" class="w-full h-full object-cover"/>
 			</div>
 		</div>
 

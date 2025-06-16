@@ -4,8 +4,9 @@ on:
   pull_request:
   push:
     branches: # Specify your branches here
-      - main # The 'main' branch
+      - master # The 'main' branch
       - 'releases/*' # The release branches
+      - gh-pages # The release branches
 
 jobs:
   qodana:
