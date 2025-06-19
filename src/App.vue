@@ -1,84 +1,64 @@
 <script setup lang="ts">
-import {onMounted, onUnmounted, ref, watch} from 'vue'
-import {animate} from 'animejs'
-import NavBar from '@/components/NavBar.vue'
-import Hero from "@/components/Hero.vue"
-import MyWork from "@/components/MyWork.vue"
+import { defineAsyncComponent, ref } from "vue";
+import { useScroll } from "@/providers/useScroll";
+import NavBar from "@/components/NavBar.vue";
+import Hero from "@/components/Hero.vue";
 
-const navBarRef = ref<HTMLElement | null>(null)
-const myWorkSectionRef = ref<HTMLElement | null>(null)
-const isNavHidden = ref(false)
+const MyWork = defineAsyncComponent(() => import("@/components/MyWork.vue"));
 
-let observer: IntersectionObserver | null = null
-
-onMounted(() => {
-	observer = new IntersectionObserver(
-			([entry]) => {
-				isNavHidden.value = entry.isIntersecting
-			},
-			{threshold: 0.8}
-	)
-	if (myWorkSectionRef.value) {
-		observer.observe(myWorkSectionRef.value)
-	}
-})
-
-onUnmounted(() => {
-	observer?.disconnect()
-})
-
-// useless animation to hide the navbar xD well it only hide when user snap into my work section
-watch(isNavHidden, (hidden) => {
-	if (!navBarRef.value) return
-	if (hidden) {
-		animate(
-				navBarRef.value, {
-					opacity: 0,
-					translateY: -40,
-					duration: 300,
-					easing: 'easeInOutQuad',
-					complete: () => {
-						navBarRef.value!.style.pointerEvents = 'none'
-					}
-				}
-		)
-	} else {
-		animate(navBarRef.value, {
-			opacity: 1,
-			translateY: 0,
-			duration: 300,
-			easing: 'easeInOutQuad',
-			begin: () => {
-				navBarRef.value!.style.pointerEvents = ''
-			}
-		})
-	}
-})
+const mainContainer = ref<HTMLElement | null>(null);
+const navbarRef = ref<InstanceType<typeof NavBar> | null>(null);
+const workSectionsWrapper = ref<HTMLElement | null>(null);
+useScroll({
+	mainContainer,
+	navbarRef,
+	workSectionsWrapper,
+});
 </script>
 
 <template>
-	<div class="transition-colors">
+	<main class="main-scroller" ref="mainContainer">
 		<header
-				class="fixed top-0 left-0 right-0 z-50"
-				ref="navBarRef"
-				style="opacity:1; transform:translateY(0); transition:none"
+			class="fixed top-0 left-0 right-0 z-50"
+			style="opacity: 1; transform: translateY(0); transition: none"
 		>
-			<NavBar/>
+			<NavBar ref="navbarRef" />
 		</header>
 
-		<main class="h-screen overflow-y-scroll snap-y snap-mandatory">
-			<slot/>
+		<slot />
 
-			<section class="h-screen snap-start snap-always">
-				<Hero/>
+		<section class="h-screen">
+			<Hero />
+		</section>
+
+		<div ref="workSectionsWrapper" class="relative">
+
+			<section class="work-section h-screen w-full">
+				<MyWork />
 			</section>
 
-			<section
-					class="h-screen w-full snap-start snap-always"
-					ref="myWorkSectionRef"
-			>
-				<MyWork/>
+			<section class="work-section h-screen w-full">
+				<MyWork />
 			</section>
-		</main>
-	</div>
+		</div>
+	</main>
 </template>
+
+<style>
+.main-scroller {
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+
+.main-scroller > section {
+	height: 100vh;
+	width: 100%;
+}
+
+@layer utilities {
+  .bg-radial {
+    background-image: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+}
+</style>

@@ -13,7 +13,7 @@ const {theme, toggleTheme} = useTheme()
 				<a href="/" class="navbar-title btn btn-ghost text-3xl font-bold tracking-wide text-base-content">DEMO</a>
 
 				<!-- Desktop Navigation Links -->
-				<div class="hidden md:flex space-x-4 text-lg antialiased">
+				<div class="hidden font-space  md:flex space-x-4 text-lg antialiased">
 					<button
 							class="btn btn-lg outline-base-content btn-base-300 w-24 text-base-content hover:btn-base-300/80 transition-colors duration-300">
 						Home

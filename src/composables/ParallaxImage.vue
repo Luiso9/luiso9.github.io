@@ -4,7 +4,7 @@
 			:class="imgClass"
 			:style="`--depth: ${depth};`"
 	>
-		<img :src="src" :alt="alt"/>
+		<img :src="src" :alt="alt" loading="lazy"/>
 	</div>
 </template>
 

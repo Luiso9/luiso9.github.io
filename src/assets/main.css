@@ -8,7 +8,7 @@ h1, .navbar-title {
     font-weight: bold;
 }
 
-p {
+p, a, button, .font-space {
     font-family: "Space Grotesk", sans-serif;
     font-weight: bold;
 }
