@@ -32,11 +32,6 @@ useScroll({
 		</section>
 
 		<div ref="workSectionsWrapper" class="relative">
-
-			<section class="work-section h-screen w-full">
-				<MyWork />
-			</section>
-
 			<section class="work-section h-screen w-full">
 				<MyWork />
 			</section>
@@ -50,15 +45,14 @@ useScroll({
 	overflow-y: scroll;
 }
 
-
 .main-scroller > section {
 	height: 100vh;
 	width: 100%;
 }
 
 @layer utilities {
-  .bg-radial {
-    background-image: radial-gradient(circle, var(--tw-gradient-stops));
-  }
+	.bg-radial {
+		background-image: radial-gradient(circle, var(--tw-gradient-stops));
+	}
 }
 </style>

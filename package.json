@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "6.19.25",
+  "version": "6.20.25",
   "description": "A modern portfolio website built with Vue 3, GSAP, and Tailwind CSS.",
   "author": "driannsa",
   "private": true,

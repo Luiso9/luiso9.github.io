@@ -18,7 +18,7 @@ export function useHeroParallax() {
 		const img2 = document.querySelector(".img-2");
 
 		preloadImages([
-			"https://cdn.driannsa.my.id/project1.webp",
+			"https://cdn.driannsa.my.id/wallhaven-vpmmk5-ezgif.com-png-to-webp-converter.webp",
 			"https://cdn.driannsa.my.id/project1.webp",
 		]);
 
