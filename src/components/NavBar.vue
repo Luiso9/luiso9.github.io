@@ -20,7 +20,7 @@ const {theme, toggleTheme} = useTheme()
 					</button>
 					<button
 							class="btn btn-lg outline-base-content btn-base-300 w-24 text-base-content hover:btn-base-300/80 transition-colors duration-300">
-						Project
+						Work
 					</button>
 					<button
 							class="btn btn-lg outline-base-content btn-base-300 w-24 text-base-content hover:btn-base-300/80 transition-colors duration-300">
@@ -60,7 +60,7 @@ const {theme, toggleTheme} = useTheme()
 				<Menu class="w-5 h-5"/>
 			</div>
 			<ul tabindex="0"
-			    class="dropdown-content menu bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 border-[0.3px] border-neutral-content/10 rounded-sm w-64 p-4 shadow-2xl mt-2">
+			    class="dropdown-content menu bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 text-accent-content border-[0.3px] border-neutral-content/10 rounded-sm w-64 p-4 shadow-2xl mt-2">
 				<li>
 					<a class="flex items-center p-3 text-base-content">
 						<House class="w-5 h-5 mr-3 text-primary"/>
@@ -70,13 +70,13 @@ const {theme, toggleTheme} = useTheme()
 				<li>
 					<a class="flex items-center p-3 text-base-content">
 						<Blinds class="w-5 h-5 mr-3 text-info"/>
-						Timeline
+						Work
 					</a>
 				</li>
 				<li>
 					<a class="flex items-center p-3 text-base-content">
 						<Share2 class="w-5 h-5 mr-3 text-accent"/>
-						Share
+						Timeline
 					</a>
 				</li>
 			</ul>

@@ -11,19 +11,19 @@ const currentSlideIndex = ref(0);
 
 const workItems = [
 	{
-		src: "/images/project1.jpg",
+		src: "https://cdn.driannsa.my.id/wZXiM61njzTbyAmG.png",
 		alt: "Project 1",
-		desc: "City of Angels is a bold 160-page portrait of the city's vibrant urban culture, featuring stunning photography and insightful commentary.",
+		desc: "Automatic Gate System Arduino using HC-SR04 and Servo 9G",
 	},
 	{
-		src: "/images/project2.jpg",
+		src: "https://cdn.driannsa.my.id/AYd7Ddnv972fvcWF.webp",
 		alt: "Project 2",
-		desc: "Another amazing project that showcases creative excellence and innovative design thinking.",
+		desc: "Automation tool for SoccerGuru hourly card claiming in Go ",
 	},
 	{
-		src: "/images/project3.jpg",
+		src: "https://cdn.driannsa.my.id/TsTokI-GvpgZ8O1u.webp",
 		alt: "Project 3",
-		desc: "Third project demonstrating mastery of visual storytelling and artistic vision.",
+		desc: "Copycat website to learn about grid system and flexbox, I LOVE SWISS DESIGN.",
 	},
 ];
 

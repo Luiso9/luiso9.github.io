@@ -3,6 +3,7 @@ import { defineAsyncComponent, ref } from "vue";
 import { useScroll } from "@/providers/useScroll";
 import NavBar from "@/components/NavBar.vue";
 import Hero from "@/components/Hero.vue";
+import Footer from "@/components/Footer.vue";
 
 const MyWork = defineAsyncComponent(() => import("@/components/MyWork.vue"));
 
@@ -37,6 +38,10 @@ useScroll({
 			</section>
 		</div>
 	</main>
+	
+	<footer>
+		<Footer />
+	</footer>
 </template>
 
 <style>
